@@ -6,7 +6,7 @@ class  WeatherApi {
   
 static Future <WeatherModel?> fetchData(String city) async{
     try{
-    String api_key= "1a2ce4b4199265b36a5d0b6f10cb5a01";
+    String api_key= "<your key>";
     // String city=controller.text;
     final url="https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric";
 
