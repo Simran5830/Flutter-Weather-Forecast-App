@@ -1,16 +1,56 @@
-# flutter_weather
+Flutter Weather Forecast App
 
-A new Flutter project.
+Description:
+A simple and elegant Flutter application that fetches and displays real-time weather information for any city using the OpenWeather API. The app allows users to search cities dynamically with autocomplete suggestions, view detailed weather metrics like temperature, humidity, and wind speed, and refresh data instantly.
 
-## Getting Started
+Key Features
 
-This project is a starting point for a Flutter application.
+City Autocomplete: Suggests city names from a local JSON file as you type.
 
-A few resources to get you started if this is your first Flutter project:
+Live Weather Data: Fetches current weather details (temperature, humidity, wind speed, etc.) using a REST API.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Dynamic UI: Background card color changes automatically based on weather conditions (e.g., sunny, rainy, cloudy).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pull to Refresh: Users can refresh data easily using a swipe-down gesture.
+
+Error Handling: Displays user-friendly messages for invalid cities or network errors.
+
+Responsive UI: Works smoothly across various screen sizes.
+
+Tech Stack
+
+Framework: Flutter
+
+Language: Dart
+
+API: OpenWeatherMap API
+
+State Management: Stateful Widgets (setState)
+
+Data Source: Local JSON (cities.json) for autocomplete suggestions
+
+Packages Used:
+
+http for API calls (in weather_api.dart)
+
+flutter/services.dart for loading local assets
+
+jsonDecode for JSON parsing
+
+How It Works
+
+City Selection:
+
+Users type or select a city from autocomplete suggestions.
+
+Weather Fetching:
+
+The app calls WeatherApi.fetchData(cityName) to retrieve live data.
+
+Display Results:
+
+Shows weather info inside a styled card, with icon and condition-specific background.
+
+Error Handling:
+
+If the city is invalid or network fails, a red snackbar displays a clear message.
